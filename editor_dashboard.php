@@ -79,7 +79,10 @@ $conn->close();
     <link rel="stylesheet" href="src/styles.css">
 </head>
 <body>
-    <h1>Добро пожаловать, Редактор</h1>
+    <header>
+        <h1>СтройДом</h1>
+        <a href="logout.php">Выход</a>
+    </header>
 
     <h2>Добавить дом</h2>
     <form method="post" enctype="multipart/form-data">
@@ -90,7 +93,9 @@ $conn->close();
             <?php endforeach; ?>
         </select>
         <input type="text" name="title" placeholder="Название дома" required>
-        <textarea name="description" placeholder="Описание" required></textarea>
+        <textarea name="description" placeholder="Площадь:
+Количество спален:
+Габариты (ШхГ):" required></textarea>
         <input type="file" name="image" required>
         <input type="number" name="price" placeholder="Цена" required>
         <button type="submit" name="add_house">Добавить дом</button>

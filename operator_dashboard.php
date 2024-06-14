@@ -44,7 +44,10 @@ $conn->close();
     <link rel="stylesheet" href="src/styles.css">
 </head>
 <body>
-    <h1>Добро пожаловать, Оператор</h1>
+    <header>
+        <h1>СтройДом</h1>
+        <a href="logout.php">Выход</a>
+    </header>
 
     <h2>Список отправленных форм</h2>
     <table border="1">

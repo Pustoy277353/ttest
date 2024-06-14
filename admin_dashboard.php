@@ -41,7 +41,10 @@ $result = $conn->query($sql);
     <link rel="stylesheet" href="src/styles.css">
 </head>
 <body>
-    <h1>Добро пожаловать, Администратор</h1>
+    <header>
+        <h1>СтройДом</h1>
+        <a href="logout.php">Выход</a>
+    </header>
     <form method="post">
         <input type="text" name="username" placeholder="Имя пользователя" required>
         <input type="password" name="password" placeholder="Пароль" required>
@@ -52,14 +55,14 @@ $result = $conn->query($sql);
         </select>
         <button type="submit" name="add_user">Добавить пользователя</button>
     </form>
-    <h1>Users</h1>
+    <h2>Пользователи</h2>
     <table border="1">
         <tr>
             <th>ID</th>
-            <th>Username</th>
-            <th>Password</th>
-            <th>Role</th>
-            <th>Action</th>
+            <th>Логин</th>
+            <th>Пароль</th>
+            <th>Роль</th>
+            <th>Действия</th>
         </tr>
         <?php
         if ($result->num_rows > 0) {

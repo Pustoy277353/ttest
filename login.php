@@ -42,6 +42,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Вход</title>
 </head>
 <body>
+    <header>
+        <h1>СтройДом</h1>
+    </header>
     <form method="post">
         <input type="text" name="username" placeholder="Имя пользователя" required>
         <input type="password" name="password" placeholder="Пароль" required>

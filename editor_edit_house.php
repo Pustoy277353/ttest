@@ -85,7 +85,10 @@ $conn->close();
     <link rel="stylesheet" href="src/styles.css">
 </head>
 <body>
-    <h1>Редактировать дом</h1>
+    <header>
+        <h1>СтройДом</h1>
+    </header>
+    <h2>Редактировать дом</h2>
 
     <form method="post" enctype="multipart/form-data">
         <select name="category_id" required>

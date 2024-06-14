@@ -55,6 +55,11 @@ header h1 a {
     text-decoration: none;
 }
 
+h2 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 header nav ul {
     list-style: none;
     display: flex;
@@ -204,91 +209,54 @@ section h2 {
 }
 
 form {
-    background-color: #f9f9f9;
+    max-width: 600px;
+    margin: 20px auto;
     padding: 20px;
-    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-form input[type="text"],
-form input[type="email"],
-form textarea {
+form input[type=text],
+form input[type=email],
+form input[type=password],
+form textarea,
+form select {
     width: 100%;
-    padding: 5px;
+    padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 14px;
 }
 
-form input[type="submit"] {
+form button[type=submit] {
     background-color: #4CAF50;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-form input[type="submit"]:hover {
-    background-color: #45a049;
-}
-
-form#addHouseForm {
-    display: none;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 1200px;
-    margin: 15px auto 15px auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-form#addHouseForm label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-form#addHouseForm input[type="number"],
-form#addHouseForm input[type="text"],
-form#addHouseForm input[type="file"],
-form#addHouseForm textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-form#addHouseForm input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 15px;
+    padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
 }
 
-form#addHouseForm input[type="submit"]:hover {
+form button[type=submit]:hover {
     background-color: #45a049;
 }
 
-form#addHouseForm textarea {
-    height: 100px;
+form textarea {
+    height: 120px;
     resize: vertical;
+}
+
+form input[type=file] {
+    margin-top: 10px;
+}
+
+form h3 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 footer {
