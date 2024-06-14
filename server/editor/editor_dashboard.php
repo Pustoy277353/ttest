@@ -76,7 +76,7 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <title>Панель Редактора</title>
-    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="../src/styles.css">
 </head>
 <body>
     <header>
@@ -131,7 +131,7 @@ $conn->close();
                     <td><img src="data:image/jpeg;base64,<?= htmlspecialchars($house['image']) ?>" width="100"></td>
                     <td><?= htmlspecialchars($house['price']) ?></td>
                     <td>
-                        <a href="editor_edit_house.php?id=<?= htmlspecialchars($house['id']) ?>">Редактировать</a>
+                        <a href="editor/editor_edit_house.php?id=<?= htmlspecialchars($house['id']) ?>">Редактировать</a>
                         <a href="?delete=<?= htmlspecialchars($house['id']) ?>" onclick="return confirm('Вы уверены?')">Удалить</a>
                     </td>
                 </tr>

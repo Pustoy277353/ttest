@@ -82,7 +82,7 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <title>Редактировать дом</title>
-    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="../../src/styles.css">
 </head>
 <body>
     <header>
@@ -107,6 +107,6 @@ $conn->close();
         <button type="submit" name="edit_house">Обновить дом</button>
     </form>
 
-    <p><a href="editor_dashboard.php">Вернуться к списку домов</a></p>
+    <p><a href="../admin.php">Вернуться к списку домов</a></p>
 </body>
 </html>

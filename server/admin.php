@@ -9,13 +9,13 @@ $role = $_SESSION['user_role'];
 
 switch ($role) {
     case 'admin':
-        include 'admin_dashboard.php';
+        include 'admin/admin_dashboard.php';
         break;
     case 'editor':
-        include 'editor_dashboard.php';
+        include 'editor/editor_dashboard.php';
         break;
     case 'operator':
-        include 'operator_dashboard.php';
+        include 'operator/operator_dashboard.php';
         break;
     default:
         echo "Неизвестная роль";

@@ -41,7 +41,7 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <title>Панель Оператора</title>
-    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="../src/styles.css">
 </head>
 <body>
     <header>

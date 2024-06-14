@@ -9,7 +9,7 @@
     <meta name="keywords" content="строительство, дома, Стройдом36, Воронеж">
     <title>ООО "Стройдом"</title>
     <link rel="stylesheet" href="src/styles.css">
-    <script src="src/fetch_categories.js" defer></script>
+    <script src="js/fetch_categories.js" defer></script>
 </head>
 
 <body>
@@ -53,7 +53,7 @@
     <section id="projects">
         <h2>Наши проекты</h2>
         <div class="container">
-            
+
         </div>
     </section>
 
@@ -131,7 +131,7 @@
             <p>Адрес: Воронеж, Беговая 225 Б, офис 8</p>
         </div>
         <div class="cntc">
-            <form action="src/sumbit_form.php" method="post">
+            <form action="server/src/sumbit_form.php" method="post">
                 <h3>Свяжитесь с нами</h3>
                 <label for="name">Имя:</label>
                 <input type="text" id="name" name="name" required><br><br>
@@ -139,7 +139,7 @@
                 <input type="email" id="email" name="email" required><br><br>
                 <label for="message">Сообщение:</label><br>
                 <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
-                <button type="submit">Войти</button>
+                <button type="submit">Отправить</button>
             </form>
         </div>
     </section>
