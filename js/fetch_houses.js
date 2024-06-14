@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const urlParams = new URLSearchParams(window.location.search);
     const category_id = urlParams.get('category_id');
 
-    fetch(`fetch_houses.php?category_id=${category_id}`)
+    fetch(`server/src/fetch_houses.php?category_id=${category_id}`)
         .then(response => response.json())
         .then(data => {
             const container = document.querySelector('.container');
