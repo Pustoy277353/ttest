@@ -1,15 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "StroyDom";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-$conn->query("SET NAMES 'utf8'");
-
-if ($conn->connect_error) {
-    die("Ошибка подключения: " . $conn->connect_error);
-}
+include 'conn.php';
 
 $id = $_POST['id'];
 $new_status = $_POST['status'];

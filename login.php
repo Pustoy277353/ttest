@@ -1,7 +1,6 @@
 <?php
 session_start();
-
-$conn = new mysqli("localhost", "root", "", "StroyDom");
+include 'server/src/conn.php';
 
 if ($conn->connect_error) {
     die("Ошибка подключения: " . $conn->connect_error);

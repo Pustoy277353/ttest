@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 categoryElement.classList.add('container-el');
                 const imageSrc = `data:image/jpeg;base64,${category.image}`;
                 categoryElement.innerHTML = `
-                    <a href="server/src/fetch_houses.php?category_id=${category.id}">
+                    <a href="houses.html?category_id=${category.id}">
                         <img src="${imageSrc}" alt="${category.name}">
                         <p>${category.name}</p>
                     </a>

@@ -1,15 +1,5 @@
 <?php
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "StroyDom";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-$conn->query("SET NAMES 'utf8'");
+include(__DIR__ . '/../src/conn.php');
 
 if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] != 'operator') {
     header('Location: login.php');
