@@ -1,10 +1,6 @@
 <?php
 include(__DIR__ . '/../src/conn.php');
 
-if ($conn->connect_error) {
-    die("Ошибка подключения: " . $conn->connect_error);
-}
-
 if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] != 'editor') {
     header('Location: login.php');
     exit();
@@ -15,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add_house'])) {
     $title = $_POST['title'];
     $description = $_POST['description'];
     $price = $_POST['price'];
-    
+
     $image = $_FILES['image']['tmp_name'];
     $imgContent = addslashes(file_get_contents($image));
 
@@ -67,11 +63,13 @@ $conn->close();
 
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <title>Панель Редактора</title>
     <link rel="stylesheet" href="../src/styles.css">
 </head>
+
 <body>
     <header>
         <h1>СтройДом</h1>
@@ -82,7 +80,7 @@ $conn->close();
     <form method="post" enctype="multipart/form-data">
         <select name="category_id" required>
             <option value="">Выберите категорию</option>
-            <?php foreach ($categories as $category): ?>
+            <?php foreach ($categories as $category) : ?>
                 <option value="<?= $category['id'] ?>"><?= $category['name'] ?></option>
             <?php endforeach; ?>
         </select>
@@ -108,7 +106,7 @@ $conn->close();
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($houses as $house): ?>
+            <?php foreach ($houses as $house) : ?>
                 <tr>
                     <?php
                     $category_name = '';
@@ -133,4 +131,5 @@ $conn->close();
         </tbody>
     </table>
 </body>
+
 </html>

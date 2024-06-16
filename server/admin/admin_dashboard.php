@@ -65,7 +65,7 @@ $result = $conn->query($sql);
                         <td>" . $row["username"]. "</td>
                         <td>" . $row["password"]. "</td>
                         <td>" . $row["role"]. "</td>
-                        <td><a href='?delete=" . $row["id"]. "'>Delete</a></td>
+                        <td><a href='?delete=" . $row["id"]. "'>Удалить</a></td>
                       </tr>";
             }
         } else {

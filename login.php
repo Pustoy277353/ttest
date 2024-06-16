@@ -1,10 +1,7 @@
 <?php
+error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING);
 session_start();
 include 'server/src/conn.php';
-
-if ($conn->connect_error) {
-    die("Ошибка подключения: " . $conn->connect_error);
-}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
@@ -26,8 +23,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     } else {
         echo "Неправильный логин или пароль.";
-        echo $user["password"],'<br>';
-        echo $password;
     }
 }
 ?>

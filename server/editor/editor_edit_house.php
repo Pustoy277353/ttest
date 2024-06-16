@@ -2,10 +2,6 @@
 session_start();
 include(__DIR__ . '/../src/conn.php');
 
-if ($conn->connect_error) {
-    die("Ошибка подключения: " . $conn->connect_error);
-}
-
 if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] != 'editor') {
     header('Location: login.php');
     exit();
